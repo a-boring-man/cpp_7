@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:40:14 by jrinna            #+#    #+#             */
-/*   Updated: 2022/10/17 14:39:36 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2022/10/17 13:48:58 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,10 @@ int	main( void ) {
 	cout << b << endl;
 	cout << c << endl;
 	cout << d << endl;
-
 	cout << "swap(a, b)" << endl;
 	swap(a, b);
 	cout << "swap(c, d)" << endl;
 	swap(c, d);
-
 	cout << "display a, b, c, d" << endl;
 	cout << a << endl;
 	cout << b << endl;
