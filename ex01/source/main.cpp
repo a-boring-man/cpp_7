@@ -6,39 +6,35 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:40:14 by jrinna            #+#    #+#             */
-/*   Updated: 2022/10/17 13:48:58 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2022/10/18 10:05:16 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/main.hpp"
 
+void	test_function_increment(int & i)
+{
+	i++;
+}
+
+void	test_function_display(const char* & s)
+{
+	cout << s << endl;
+}
+
+void	test_function_display(const int & s)
+{
+	cout << s << endl;
+}
+
 int	main( void ) {
 
-	int a = 42;
-	int	b = 78;
-	float	c = 42.42;
-	float 	d = 56.4;
-	
-	cout << "min(42, 78) : ";
-	cout << min(a, b) << endl;
-	cout << "min(42.42, 56.4) : ";
-	cout << min(c, d) << endl;
-	cout << "max(42, 78) : ";
-	cout << max(a, b) << endl;
-	cout << "max(42.42, 56.4) : ";
-	cout << max(c, d) << endl;
-	cout << "display a, b, c, d" << endl;
-	cout << a << endl;
-	cout << b << endl;
-	cout << c << endl;
-	cout << d << endl;
-	cout << "swap(a, b)" << endl;
-	swap(a, b);
-	cout << "swap(c, d)" << endl;
-	swap(c, d);
-	cout << "display a, b, c, d" << endl;
-	cout << a << endl;
-	cout << b << endl;
-	cout << c << endl;
-	cout << d << endl;
+	int			tab[6] = {0,1,2,3,4,5};
+	const char* sentence[3] = {"salut", "comment", "vas-tu ?"};
+
+	iter(tab, 6, test_function_increment);
+	for (int i = 0; i < 6; i++){
+		cout << tab[i] << endl;
+	}
+	iter(sentence, 3, test_function_display);
 }

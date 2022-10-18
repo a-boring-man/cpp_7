@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 11:38:46 by jrinna            #+#    #+#             */
-/*   Updated: 2022/10/17 13:44:26 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2022/10/18 09:58:33 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,19 @@ using	std::endl;
 using	std::string;
 
 template	< typename T >
-T const & min(const T & a, const T & b) {
-	return ((a<b) ? a : b);
+void	iter(T* array, int lengh, void (&f)(T&)){
+
+	for (int i = 0; i < lengh; i++)
+	{
+		f(array[i]);
+	}
 }
 
 template	< typename T >
-T const & max(const T & a, const T & b) {
-	return ((a>b) ? a : b);
-}
+void	iter(const T* array, int lengh, void (&f)(const T&)){
 
-template	< typename T >
-void	swap(T & a, T & b) {
-	T	tmp = a;
-	a = b;
-	b = tmp;
+	for (int i = 0; i < lengh; i++)
+	{
+		f(array[i]);
+	}
 }

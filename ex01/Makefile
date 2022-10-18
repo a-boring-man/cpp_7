@@ -6,7 +6,7 @@
 #    By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/17 11:17:53 by jrinna            #+#    #+#              #
-#    Updated: 2022/10/17 11:37:15 by jrinna           ###   ########lyon.fr    #
+#    Updated: 2022/10/17 14:40:46 by jrinna           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ DEP := ${addprefix ${DIR_OBJ}/,${LST_DEP}}
 
 CC := c++ -std=c++98
 CFLAGS := -Wall -Wextra -Werror -MD #-fsanitize=address -g3
-NAME := Giantdad
+NAME := Iterminable
 
 all : ${NAME}
 
